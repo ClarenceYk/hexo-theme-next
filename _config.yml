@@ -47,6 +47,9 @@ favicon:
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
+# Show multilingual switcher in footer.
+language_switcher: false
+
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
   since: 2020
@@ -64,17 +67,8 @@ footer:
   # If not defined, `author` from Hexo `_config.yml` will be used.
   copyright:
 
-  powered:
-    # Hexo link (Powered by Hexo).
-    enable: true
-    # Version info of Hexo after Hexo link (vX.X.X).
-    version: false
-
-  theme:
-    # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
-    # Version info of NexT after scheme info (vX.X.X).
-    version: false
+  # Powered by Hexo & NexT
+  powered: true
 
   # Beian ICP and gongan information for Chinese users. See: http://www.beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
@@ -461,9 +455,6 @@ font:
 # Disable Baidu transformation on mobile devices.
 disable_baidu_transformation: false
 
-# Change headers hierarchy on site-subtitle (will be main site description) and on all post / page titles for better SEO-optimization.
-seo: false
-
 # If true, site-subtitle will be added to index page.
 # Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
 index_with_subtitle: false
@@ -700,13 +691,14 @@ cnzz_siteid:
 # Do not enable both `valine.visitor` and `leancloud_visitors`.
 leancloud_visitors:
   enable: false
-  app_id: # <app_id>
-  app_key: # <app_key>
+  app_id: # <your app id>
+  app_key: # <your app key>
+  # Required for apps from CN region
+  server_url: # <your server url>
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
   # If you don't care about security in leancloud counter and just want to use it directly
   # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
   security: true
-  betterPerformance: false
 
 # Another tool to show number of visitors to each article.
 # Visit https://console.firebase.google.com/u/0/ to get apiKey and projectId.
@@ -967,7 +959,7 @@ vendors:
 
   # Mermaid
   # mermaid: //cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js
-  # mermaid: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.2/mermaid.min.js
+  # mermaid: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js
   mermaid:
 
   # Internal version: 1.2.1
